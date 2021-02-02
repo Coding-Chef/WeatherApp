@@ -1,0 +1,104 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <!--Imports-->
+    <script src="Scripts/jquery-3.5.1.min.js"></script>
+    <script src="geolocation.js"></script>
+    <script src="weather.js"></script>
+    <link href="weather.css" rel="stylesheet" />
+
+    <title>My Weather</title>
+</head>
+<body>
+    <main>
+        <header>
+            <h1 id="header">My Weather</h1>
+        </header>
+        <!-- Form for lat and long -->
+        <form id="getWeatherForm" class="weatherForm">
+            <h3>Geolocation</h3>
+            <label for="latInput">Latitude:</label>
+            <input type="number" id="latInput" step="0.000001" required />
+            <label for="longInput">Longitude:</label>
+            <input type="number" id="longInput" step="0.000001" required />
+            <input type="button" id="getWeatherButt" value="Get Weather"/>
+        </form>
+        <!-- Form for weather grid -->
+        <form id="forecastForm" class="weatherForm">
+            <h3 id="forecastHeader">Forecast</h3>
+            <div class="gridContainer">
+                <!-- Top row -->
+                <div class="gridCell" id="topLCell"></div>
+                <div class="gridCell timeCell"></div>
+                <div class="gridCell timeCell"></div>
+                <div class="gridCell timeCell"></div>
+                <div class="gridCell timeCell"></div>
+                <div class="gridCell timeCell"></div>
+                <div class="gridCell timeCell"></div>
+                <div class="gridCell timeCell"></div>
+                <div class="gridCell timeCell"></div>
+                <!-- Second row -->
+                <div class="gridCell dateCell"></div>
+                <div class="gridCell weatherCell"></div>
+                <div class="gridCell weatherCell"></div>
+                <div class="gridCell weatherCell"></div>
+                <div class="gridCell weatherCell"></div>
+                <div class="gridCell weatherCell"></div>
+                <div class="gridCell weatherCell"></div>
+                <div class="gridCell weatherCell"></div>
+                <div class="gridCell weatherCell"></div>
+                <!-- Third row -->
+                <div class="gridCell dateCell"></div>
+                <div class="gridCell weatherCell"></div>
+                <div class="gridCell weatherCell"></div>
+                <div class="gridCell weatherCell"></div>
+                <div class="gridCell weatherCell"></div>
+                <div class="gridCell weatherCell"></div>
+                <div class="gridCell weatherCell"></div>
+                <div class="gridCell weatherCell"></div>
+                <div class="gridCell weatherCell"></div>
+                <!-- Fourth row -->
+                <div class="gridCell dateCell"></div>
+                <div class="gridCell weatherCell"></div>
+                <div class="gridCell weatherCell"></div>
+                <div class="gridCell weatherCell"></div>
+                <div class="gridCell weatherCell"></div>
+                <div class="gridCell weatherCell"></div>
+                <div class="gridCell weatherCell"></div>
+                <div class="gridCell weatherCell"></div>
+                <div class="gridCell weatherCell"></div>
+                <!-- Fifth row -->
+                <div class="gridCell dateCell"></div>
+                <div class="gridCell weatherCell"></div>
+                <div class="gridCell weatherCell"></div>
+                <div class="gridCell weatherCell"></div>
+                <div class="gridCell weatherCell"></div>
+                <div class="gridCell weatherCell"></div>
+                <div class="gridCell weatherCell"></div>
+                <div class="gridCell weatherCell"></div>
+                <div class="gridCell weatherCell"></div>
+                <!-- Sixth row -->
+                <div class="gridCell dateCell"></div>
+                <div class="gridCell weatherCell"></div>
+                <div class="gridCell weatherCell"></div>
+                <div class="gridCell weatherCell"></div>
+                <div class="gridCell weatherCell"></div>
+                <div class="gridCell weatherCell"></div>
+                <div class="gridCell weatherCell"></div>
+                <div class="gridCell weatherCell"></div>
+                <div class="gridCell weatherCell"></div>
+            </div>
+        </form>
+        <!-- Line graph -->
+        <form id="weatherGrid" class="weatherForm">
+            <h3>Line chart</h3>
+            <canvas id="graph" width="1600" height="500"></canvas>
+        </form>
+        <footer>
+            <p>Data from OpenWeatherMap's <a href="https://openweathermap.org/forecast5" target="_blank">5 day forecast API</a>. Images from OpenWeatherMap's <a href="https://openweathermap.org/weather-conditions#How-to-get-icon-URL" target="_blank">weather icons</a>.
+            Valid <a href="https://validator.w3.org/#validate_by_input" target="_blank">HTML5</a> and <a href="https://jigsaw.w3.org/css-validator/#validate_by_input" target="_blank">CSS3</a>.</p>
+        </footer>
+    </main>
+</body>
+</html>

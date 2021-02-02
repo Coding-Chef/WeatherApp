@@ -1,0 +1,53 @@
+﻿body {
+    /*Set the margin for the whole page*/
+    margin-left: 5%;
+    margin-right: 5%;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+.weatherForm {
+    background-color: lightgray;
+    border: 1px solid black;
+    padding: 10px;
+    min-width: 1150px;
+}
+.gridContainer {
+    display: grid;
+    grid-template-columns: auto auto auto auto auto auto auto auto auto;
+    grid-template-rows: auto auto auto auto auto auto;
+    padding: 1%;
+    grid-column-gap: 4px;
+    grid-row-gap: 4px;
+    min-width: 1100px;
+    width: 95%;
+}
+.gridCell {
+    border: 1px solid black;
+    font-size: 30px;
+    text-align: center;
+    min-width: 100px;
+    min-height: 100px;
+}
+.timeCell {
+    background-color: dodgerblue;
+    /*Makes the times visible while scrolling*/
+    position: sticky;
+    top: 0;
+}
+.dateCell {
+    background-color: coral;
+    padding-top: 50%;
+    font-size: 25px;
+}
+.weatherCell {
+    font-size: 25px;
+    background-color: lightblue;
+}
+/*Hiding the first cell*/
+#topLCell {
+    visibility: hidden;
+}
+#graph {
+    border: 2px solid black;
+    background-color: coral;
+    width: 95%;
+}
